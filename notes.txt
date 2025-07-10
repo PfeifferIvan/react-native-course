@@ -1,2 +1,7 @@
 General Notes regarding the framework
 
+To run the app on my physical device open Expo Go app and then run "npm start" on terminal. 
+
+Native apps are strciter than WEB
+
+Content must be inside components that can displayed. eg "Hello World" should be inside a Text component. 
