@@ -12,6 +12,8 @@
 
 - ScrollView takes the size of the parent element, therefore its prefered to be nested inside a View element. (It renders every item at the beginning.)
 
+- To show react that an item is pressable you should let react native know by adding Pressable. s
+
 ## Styling
 
 - Inline Styles or StyleSheet Objects (not css).
