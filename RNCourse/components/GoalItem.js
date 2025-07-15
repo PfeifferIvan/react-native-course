@@ -6,7 +6,11 @@ function GoalItem(props) {
     <View style={styles.listItemView}>
       <Text style={styles.listItem}>{props.text}</Text>
       <View style={styles.deleteIconView}>
-        <Pressable onPress={() => props.onDeleteItem(props.id)}>
+        <Pressable
+          onPress={() => props.onDeleteItem(props.id)}
+          android_ripple={{ color: "#dddddd" }}
+          style={({ pressed }) => pressed && styles.pressedItem}
+        >
           <DeleteIconSVG />
         </Pressable>
       </View>
@@ -36,5 +40,9 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 8,
     padding: 6,
+  },
+
+  pressedItem: {
+    opacity: 0.5,
   },
 });
