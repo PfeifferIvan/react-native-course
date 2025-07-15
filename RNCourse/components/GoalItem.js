@@ -6,7 +6,7 @@ function GoalItem(props) {
     <View style={styles.listItemView}>
       <Text style={styles.listItem}>{props.text}</Text>
       <View style={styles.deleteIconView}>
-        <Pressable onPress={props.onDeleteItem.bind(this, props.id)}>
+        <Pressable onPress={() => props.onDeleteItem(props.id)}>
           <DeleteIconSVG />
         </Pressable>
       </View>
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#5e0acc",
     borderRadius: 6,
     alignItems: "center",
+    marginTop: 10,
   },
 
   listItem: {

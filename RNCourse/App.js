@@ -14,11 +14,8 @@ export default function App() {
   }
 
   function deleteGoalHandler(id) {
-    console.log(id);
     setCourseGoals((curentCourseGoals) => {
-      return curentCourseGoals.filter((goal) => {
-        goal.id !== id;
-      });
+      return curentCourseGoals.filter((goal) => goal.id !== id);
     });
   }
 
@@ -32,7 +29,7 @@ export default function App() {
             return (
               <GoalItem
                 text={itemData.item.text}
-                id={itemData.item.index}
+                id={itemData.item.id}
                 onDeleteItem={deleteGoalHandler}
               />
             );
