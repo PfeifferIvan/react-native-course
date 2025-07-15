@@ -20,6 +20,7 @@
 - Inline Styles style={{}}.
 - There are some difference between iOS and Android.
 - There is no cascading.
+- For multiple screen apps you can add the background color in the app.json.
 
 ### Layouts
 
@@ -32,3 +33,7 @@
 
 - eventListeners, useState, onChangeText (passes each keystroke.)
 - useState const [variable, function] = useState(InitialValue)
+
+### Images
+
+- Images can be styled and source must call the require function.
