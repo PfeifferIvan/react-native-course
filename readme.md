@@ -28,6 +28,7 @@
   - Cross Axis (x) and Main axis (y)
   - useful Link https://reactnative.dev/docs/flexbox
   - flex=1,2,3 add space and determines how much space each item uses.
+  - SafeViewArea is a very useful component to respect the build in components of the phone. 
 
 ### Handling Events
 
@@ -37,3 +38,7 @@
 ### Images
 
 - Images can be styled and source must call the require function.
+
+### Buttons
+- on Android Elevation provides a shadow and android_ripple a feedback.
+- on iOS shadow has 4 properties and for the feedback 
