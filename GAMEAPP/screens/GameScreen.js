@@ -1,8 +1,11 @@
-import { Text, StyleSheet, View, Alert } from "react-native";
+import { StyleSheet, View, Alert } from "react-native";
 import Tittle from "../components/Tittle";
 import NumberContainer from "../components/Game/NumberContainer";
 import { useState, useEffect } from "react";
 import PrimaryButton from "../components/PrimaryButton";
+import Card from "../components/Card";
+import InstructionText from "../components/InstructionText";
+import { Ionicons } from "@expo/vector-icons";
 
 function generateRandomBetween(min, max, exclude) {
   const rndNum = Math.floor(Math.random() * (max - min)) + min;
@@ -49,17 +52,23 @@ function GameScreen(props) {
     <View style={styles.screen}>
       <Tittle>Opponent's Guess</Tittle>
       <NumberContainer>{currentGuess}</NumberContainer>
-      <View>
-        <Text>Higher or Lower?</Text>+ -<View>Log Rounds</View>
-        <View>
-          <PrimaryButton onPress={() => nextGuessHandler("plus")}>
-            +
-          </PrimaryButton>
-          <PrimaryButton onPress={() => nextGuessHandler("minus")}>
-            -
-          </PrimaryButton>
+      <Card>
+        <InstructionText style={styles.instructionText}>
+          Higher or Lower?
+        </InstructionText>
+        <View style={styles.buttonsContainer}>
+          <View style={styles.buttonContainer}>
+            <PrimaryButton onPress={() => nextGuessHandler("plus")}>
+              <Ionicons name="add" size={24} color={"white"} />
+            </PrimaryButton>
+          </View>
+          <View style={styles.buttonContainer}>
+            <PrimaryButton onPress={() => nextGuessHandler("minus")}>
+              <Ionicons name="remove" size={24} color={"white"} />
+            </PrimaryButton>
+          </View>
         </View>
-      </View>
+      </Card>
     </View>
   );
 }
@@ -70,5 +79,14 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 40,
+  },
+  buttonsContainer: {
+    flexDirection: "row",
+  },
+  buttonContainer: {
+    flex: 1,
+  },
+  instructionText: {
+    marginBottom: 12,
   },
 });
