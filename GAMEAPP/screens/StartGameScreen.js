@@ -19,7 +19,6 @@ function StartGameScreen(props) {
 
   function confirmInputhHandler() {
     const chosenNummber = parseInt(enteredNumber);
-    console.log(isNaN(chosenNummber));
     if (isNaN(chosenNummber) || chosenNummber <= 0 || chosenNummber > 99) {
       Alert.alert("Invalid Number", "Number must be between 1 and 99.", [
         { text: "Okay", style: "destructive", onPress: resetInputHandler },

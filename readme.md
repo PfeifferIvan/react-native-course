@@ -42,3 +42,9 @@
 ### Buttons
 - on Android Elevation provides a shadow and android_ripple a feedback.
 - on iOS shadow has 4 properties and for the feedback 
+
+### Components 
+- For replicating kind of a cascade effect, you can pass style as a prop to a component. 
+
+### Icons
+- Expo has "@expo/vector-icons" as a library. 
