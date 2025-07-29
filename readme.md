@@ -55,3 +55,13 @@
 ### Dimensions API
 
 - .get() window or screen. iOS is the same but android windows does not contain the status bar.
+
+### Navigation
+
+- There are several navigator packages.
+- Stack needs to be created with createNativeStackNavigator()
+- navigation prop is passed to screens created by Stack.Screen
+- navigation.navigate("Name_screen") is used to tell where to navigate.
+- initialRouteName can be added to set default screen.
+- useNavigation is also able to set up the navigation object in any component.
+- route.params is used to retrive the object passed to the screen. useRoute provide the route to any component.
