@@ -65,3 +65,7 @@
 - initialRouteName can be added to set default screen.
 - useNavigation is also able to set up the navigation object in any component.
 - route.params is used to retrive the object passed to the screen. useRoute provide the route to any component.
+
+# Drawer
+
+- navigation.toggleDrawer() can be implemented to open the drawer from outside the header.
