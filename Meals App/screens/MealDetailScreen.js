@@ -17,10 +17,20 @@ export default function MealDetailScreen({ route, navigation }) {
 
   const selectedMeal = MEALS.find((meal) => meal.id === mealId);
 
+  function pressHeaderButtonHandler() {
+    console.log("Pressed");
+  }
+
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => {
-        return <IconButton />;
+        return (
+          <IconButton
+            onPress={pressHeaderButtonHandler}
+            icon={"star"}
+            color={"white"}
+          />
+        );
       },
     });
   }, [navigation]);
