@@ -69,3 +69,9 @@
 # Drawer
 
 - navigation.toggleDrawer() can be implemented to open the drawer from outside the header.
+
+### Redux & Context
+
+- we only use context or redux, not both.
+- createContext({object of properties and methods needed}).
+- create a componentProvider and pass value object.

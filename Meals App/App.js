@@ -5,6 +5,7 @@ import MealsOverviewScreen from "./screens/MealsOverviewScreen";
 import MealDetailScreen from "./screens/MealDetailScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import FavoriteMealScreen from "./screens/FavoriteMealScreen";
+import FavoriteContextProvider from "./store/context/favorites-context";
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -30,33 +31,35 @@ function drawernavigator() {
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle: { backgroundColor: "#351401" },
-          headerTintColor: "white",
-          contentStyle: { backgroundColor: "#3f2f25" },
-        }}
-      >
-        <Stack.Screen
-          name="MealsCategories"
-          component={drawernavigator}
-          options={{
-            headerShown: false,
+    <FavoriteContextProvider>
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: { backgroundColor: "#351401" },
+            headerTintColor: "white",
+            contentStyle: { backgroundColor: "#3f2f25" },
           }}
-        />
-        <Stack.Screen
-          name="MealsOverview"
-          component={MealsOverviewScreen}
-          // options={({ route, navigation }) => {
-          //   const catId = route.params.categoryId;
-          //   return {
-          //     title: catId,
-          //   };
-          // }}
-        />
-        <Stack.Screen name="MealDetails" component={MealDetailScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+        >
+          <Stack.Screen
+            name="MealsCategories"
+            component={drawernavigator}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="MealsOverview"
+            component={MealsOverviewScreen}
+            // options={({ route, navigation }) => {
+            //   const catId = route.params.categoryId;
+            //   return {
+            //     title: catId,
+            //   };
+            // }}
+          />
+          <Stack.Screen name="MealDetails" component={MealDetailScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </FavoriteContextProvider>
   );
 }
