@@ -57,7 +57,6 @@ export default function ExpenseForm({
           },
         };
       });
-      return;
     }
 
     onSubmit(expensaData);

@@ -75,3 +75,8 @@
 - we only use context or redux, not both.
 - createContext({object of properties and methods needed}).
 - create a componentProvider and pass value object.
+
+### https requests and firebase
+
+- Firebase is a cloud hosted db.
+- base URL + {node}.json
